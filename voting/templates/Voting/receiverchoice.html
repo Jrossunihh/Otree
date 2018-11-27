@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load static otree %}
+
+{% block title %}
+    Welcome to the experiment, you are a receiver
+{% endblock %}
+
+{% block content %}
+
+    Please enter the following information.
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+<p>Please answer the following questions about yourself to your best knowledge.<br>
+<br></p>
+
+    {% formfield player.gender label="What is your gender?"%} <br>
+
+    {% formfield player.age label="What is your age?"%}<br>
+
+    {% formfield player.nationality label="What is your current country of residence?"%}<br>
+
+    {% formfield player.education label="What is the highest degree or level of school you have completed? If currently enrolled, mark the previous grade or highest degree received. Non-Us-citizens: please select your countries equivalent."%}<br>
+
+    {% formfield player.income label="What is your total anual household income?"%}<br>
+
+    {% formfield player.riskaversion label="How do you assess your own willingness to take risks? Are you in general eager to take risks or try to evade risks? Please select a value on the scale below, where 0 indicates 'not willing to take any risks' and 10 indicates 'very willing tot ake risks'."%}<br>
+
+    {% next_button %}
+
+{% endblock %}

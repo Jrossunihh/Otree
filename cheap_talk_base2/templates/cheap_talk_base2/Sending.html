@@ -1,0 +1,132 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Welcome to Round 2!
+{% endblock %}
+
+{% block content %}
+<p>
+    This round, you have drawn the following number of tickets: {{ player.signal }}<br>
+    You can now choose a message to send to the receiver. The receiver will see your message as follows: "Hello
+    receiver, I have ... winning tickets."<br>
+
+</p>
+
+{% formfield player.message label="Which message do you want to send to the receiver?"%}
+
+<br>
+<br>
+ <center>
+     {% next_button %}
+      <br>
+     <div class="container">
+
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Instructions
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Instructions</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+             <p>
+            <h2>Please read the following information carefully!
+            </h2>
+
+            <p>
+                Throughout the experiment, your identity will be completely anonymous and
+                will not be disclosed to anyone else. All participants will receive these exact same instructions.<br>
+                </p>
+
+            <p> <em>Note: If only the male form is chosen, this is not meant to be gender-specific but serves solely
+                 for the better comprehensibility and legibility of the text.
+            </em></p>
+            <p>
+                <h2>About the experiment
+                </h2>
+            <p> The experiment will take about 25 minutes. For participating in the experiment you will earn $1
+             for sure and can earn up to $6 in bonus payments, depending on your and other participants’ behavior.<br><br>
+
+            There will be a total of 20 rounds, followed by a short survey that will not affect your payment in
+             any way. At the end of the experiment, only one of the 20 rounds will be randomly selected, and the earnings
+             in that round will determine your bonus payment.
+            </p><p>
+        <h2>Course of the experiment
+        </h2>
+
+        <p>
+        Each participant will be randomly assigned a role – either the role of the sender or the role of the receiver.
+        Roles will not change at any time. In each round, two senders and one receiver will be playing together.
+        You will be randomly grouped with two other participants each round, so you won't always face the same
+        sender(s) or reciever. The probability of being grouped with the same participants is very low.<br>
+        </p>
+
+        <p>
+        <h2>Each round will take place as follows:
+        </h2>
+        <ol>
+                <li><p>At the beginning of the round, each sender will get 10 lottery tickets. These lottery tickets have no
+                    value to the sender, but to the receiver. Each ticket can either be a winning ticket or a blank. The number
+                    of winning tickets out of the 10 is randomly assigned to each sender each round. There can be 1, 3, 5, 7
+                    or 9 winning tickets out of the 10. The rest are always blanks. Only the sender will know how many of his
+                    10 tickets are winning tickets.</p></li>
+                <li><p>Each sender sends a message to the receiver, indicating the number of winning lottery tickets he has
+                    (again taking values of 1, 3, 5, 7 or 9). The message does not have to indicate the true number of winning
+                    ticketsa.</p></li>
+                <li><p>Based on the messages by the two senders in his group, the receiver has to choose one of the senders. The
+                    chosen sender earns a bonus payment of $6. The other sender receives a bonus payment of $0.</p></li>
+                <li><p> For the receiver, the bonus payment is determined by a lottery. The lottery box contains the 10 lottery
+                     tickets of the sender he has chosen. One out of the 10 lottery tickets is drawn and determines the
+                     receivers' bonus payment for this round – either $5 if it's a winning ticket or $0 if a blank is drawn.
+                     All tickets are discarded at the end of each round, so they don't carry over to the next round.<br><br>
+                    Hint: Remember that the senders' message does not have to indicate the true number of winning tickets. </p></li>
+                <li><p>The receiver will be informed about the result of each rounds' lottery after the final round. In some
+                    rounds the receiver may also learn how many winning tickets actually were in the box. If so, everyone will
+                    be informed about that prior to these rounds. Senders will learn in which rounds they have been chosen when
+                    they receive their bonus payment. Everyone will see a short summary of their choices after the last round.
+                </p></li>
+        </ol>
+            <p>
+                <h2>Example:
+                </h2>
+
+            <p>
+                Sender A has received 7 winning tickets (blue), while sender B has received 3. Sender A chooses to send the
+                message 7 while Sender B chooses to send message 9. After observing both messages, but not the actual number of
+                winning tickets, the receiver can choose either A or B.<br>
+                </p>
+
+            <p>
+                Let's assume the receiver choses sender B. Sender B will earn $6, while sender A will earn nothing. Out of the
+                10 tickets of sender B, one will be randomly drawn. If it is a blue winning ticket, the receiver will earn
+                $5. If it is a red blank he will earn nothing.
+        <br>
+                </p>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+ </center>
+
+
+{% endblock %}

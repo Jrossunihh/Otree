@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+     Instructions
+{% endblock %}
+
+{% block content %}
+    <p>
+        Example: Sender A has received 7 winning tickets (blue), while sender B has received 3. Sender A chooses to
+        send the message 7 while Sender B chooses to send message 9. After observing both messages, but not the actual
+        number of winning tickets, the receiver can choose either A or B.
+</p>
+    <p>
+<img src="{% static "/global/pics/ins1.jpg" %}"/>
+
+</p>
+{% next_button %}
+{% endblock %}

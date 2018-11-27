@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load static otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    <p>Your id is {{ player.workerid }} and you chose {{ player.choice }}.</p>
+
+    {% next_button %}
+{% endblock %}

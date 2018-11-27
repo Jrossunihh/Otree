@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load static otree %}
+
+{% block title %}
+    Welcome to the Experiment, you are a Sender
+{% endblock %}
+
+{% block content %}
+
+     <p>
+    You have drawn the signal {{player.signal}}.
+    </p>
+{% formfield player.message label="Which message do you want to send to the receiver?"%}
+ {% next_button %}
+{% endblock %}

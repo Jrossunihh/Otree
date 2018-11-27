@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Page title
+{% endblock %}
+
+{% block content %}
+<p>
+    Role:  {{ player.role}}<br>
+    Treatmentgroup:  {{ player.treatmentgroup }}<br>
+    treatment cont var: {{ player.treatment }}
+
+
+</p>
+    {% next_button %}
+
+{% endblock %}

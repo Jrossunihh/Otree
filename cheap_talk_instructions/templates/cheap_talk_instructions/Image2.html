@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+     Instructions
+{% endblock %}
+
+{% block content %}
+    <p>
+        Let's assume the receiver choses sender B. Sender B will earn $6, while sender A will earn nothing. Out of
+        the 10 tickets of sender B, one will be randomly drawn. If it is a blue winning ticket, the receiver will
+        earn $5. If it is a red blank he will earn nothing. You can review these instructions at any time by clicking
+        the button on the bottom of the page.
+</p>
+    <p>
+<img src="{% static "/global/pics/ins2.jpg" %}"/>
+
+</p>
+{% next_button %}
+{% endblock %}

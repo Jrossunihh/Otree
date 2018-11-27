@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load static otree %}
+
+{% block title %}
+    Welcome to the experiment
+{% endblock %}
+
+{% block content %}
+    <p>You are a {{ player.role }}.</p>
+     {% formfield player.workerid label="Please insert your Mturk Worker ID"%}
+    {% next_button %}
+
+{% endblock %}

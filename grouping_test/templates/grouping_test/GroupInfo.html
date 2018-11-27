@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Info about player vars
+{% endblock %}
+
+{% block content %}
+Your info
+<p>
+    Subgroup: {{subgroup}}
+    Your ID: {{ ownid }}<br>
+    Others ID1 {{ other1 }}<br>
+    Others ID2 {{ other2 }}<br>
+</p>
+
+    {% next_button %}
+<br>
+<br>
+
+
+
+{% endblock %}
